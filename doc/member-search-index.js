@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.ruby.java.ch03제어문","c":"Test18","l":"sum(int, int)","u":"sum(int,int)"},{"p":"com.ruby.java.ch03제어문","c":"Test18","l":"Test18()","u":"%3Cinit%3E()"}];updateSearchResults();
