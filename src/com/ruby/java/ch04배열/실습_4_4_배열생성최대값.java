@@ -29,9 +29,13 @@ public class 실습_4_4_배열생성최대값 {
 		
 		System.out.print("[");
 		
+		int cnt = 0;
+		
 		for (int i=0; i<10; i++) {
 			price[i]=rd.nextInt(101);
-			System.out.print(price[i]+",");
+			System.out.print(price[i]);
+			if (price.length > ++cnt) {
+				System.out.print(",");}
 			
 			sum += price[i];
 			

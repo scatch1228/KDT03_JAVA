@@ -22,68 +22,56 @@ public class 실습_4_5_행렬연산 {
 //
 //    	점수는 0~99 사이의 무작위 숫자로 채운다.
     	
+//    	2. 같은 크기의 표 B도 만들어서 무작위 점수로 채운다.
+//      3. C = A + B
+    	//
+//    	    	A와 B의 각 자리에 있는 값을 더해서 C라는 새로운 표를 만든다.
+    	//
+//    	    	예: C[0][0] = A[0][0] + B[0][0]
+    	
     	Random rd = new Random();
     	
     	int[][] A = new int [3][5];
+    	int[][] B = new int [3][5];
+    	int[][] C = new int [3][5];
     	
     	for (int i=0; i<3; i++) {
     		for (int j=0; j<5; j++) {
     			A[i][j] = rd.nextInt(100);
-    		}
-    	}
+    			B[i][j] = rd.nextInt(100);
+    			C[i][j] = A[i][j]+B[i][j] ;//C=A+B
+    		}//j close
+    	}//i close
     	
     	System.out.println("A는 이렇게 생김");
     	for (int i=0; i<3; i++) {
     		System.out.println("\n");
     		for (int j=0; j<5; j++) {
-    			System.out.print(A[i][j] + "  ");
-    		}
-    	}
+    			System.out.print(A[i][j] + "  ");//print A
+    		}//j close
+    	}//i close
     	
     	System.out.println("\n");
     	System.out.println("==========\n");
-    	
-//    2. 같은 크기의 표 B도 만들어서 무작위 점수로 채운다.
-//
-    	int[][] B = new int [3][5];
-    	
-    	for (int i=0; i<3; i++) {
-    		for (int j=0; j<5; j++) {
-    			B[i][j] = rd.nextInt(100);
-    		}
-    	}
     	
     	System.out.println("B는 이렇게 생김");
     	for (int i=0; i<3; i++) {
     		System.out.println("\n");
     		for (int j=0; j<5; j++) {
-    			System.out.print(B[i][j] + "  ");
+    			System.out.print(B[i][j] + "  ");//print B
     		}
     	}
     	
     	System.out.println("\n");
     	System.out.println("==========\n");
     	
-//    3. C = A + B
-//
-//    	A와 B의 각 자리에 있는 값을 더해서 C라는 새로운 표를 만든다.
-//
-//    	예: C[0][0] = A[0][0] + B[0][0]
-//
     	
-    	int[][] C = new int [3][5];
-    	
-    	for (int i=0; i<3; i++) {
-    		for (int j=0; j<5; j++) {
-    			C[i][j] = A[i][j]+B[i][j] ;
-    		}
-    	}
-    	
+
     	System.out.println("C는 이렇게 생김");
     	for (int i=0; i<3; i++) {
     		System.out.println("\n");
     		for (int j=0; j<5; j++) {
-    			System.out.print(C[i][j] + "  ");
+    			System.out.print(C[i][j] + "  ");//print C
     		}
     	}
     	
@@ -106,7 +94,7 @@ public class 실습_4_5_행렬연산 {
     	for (int i=0; i<5; i++) {
     		System.out.println("\n");
     		for (int j=0; j<4; j++) {
-    			System.out.print(D[i][j] + "  ");
+    			System.out.print(D[i][j] + "  ");//print D
     		}
     	}
     	
@@ -125,22 +113,19 @@ public class 실습_4_5_행렬연산 {
     	
     	for (int i=0; i<3; i++) {
     		for (int j=0; j<4; j++) {
-    			int sum = 0;
     			for (int k=0; k<5; k++) {
-    				sum += A[i][k]*D[k][j];
-    			}
-    			E[i][j]= sum;
-    		}
-    		
-    	}
+    				E[i][j] += A[i][k]*D[k][j];//E=A \times D
+    			}//k close
+    		}//j close
+    	}//i close
     	
     	
 //    6. 2차원 배열을 테이블 형태로 출력한다 
     	for (int i=0; i<3; i++) {
     		System.out.println("\n");
     		for (int j=0; j<4; j++) {
-    			System.out.print(E[i][j] + "  ");
+    			System.out.print(E[i][j] + "  ");//print E
     		} 
     	}
-    }
-}
+    }//static void
+}//class

@@ -28,9 +28,12 @@ public class 실습_4_2_배열생성최대값 {
 		}
 		System.out.println("최대값=" + priceMax);
 		
+		int cnt=0;
+		
 		System.out.print("[");
 		for (int n:price) {
-			System.out.print(n+",");
+			System.out.print(n);
+			if (price.length > ++cnt) {System.out.print(",");}
 		}
 		System.out.println("]");
 		

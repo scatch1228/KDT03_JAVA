@@ -23,13 +23,13 @@ public class 실습_4_3_배열_점수평균 {
 			if(score[j]>=90) {
 				System.out.println(score[j] + "- A 학점");
 			}
-			else if(90>score[j] & score[j]>=80) {
+			else if(score[j]>=80) {
 				System.out.println(score[j] + "- B 학점");
 			}
-			else if(80>score[j] & score[j]>=70) {
+			else if(score[j]>=70) {
 				System.out.println(score[j] + "- C 학점");
 			}
-			else if(70>score[j] & score[j]>=60) {
+			else if(score[j]>=60) {
 				System.out.println(score[j] + "- D 학점");
 			}
 			else {
