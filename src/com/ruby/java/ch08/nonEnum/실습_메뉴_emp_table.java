@@ -7,6 +7,7 @@ import java.util.Scanner;
  * 메뉴: ADD_ALL, ADD_NEW, DELETE, UPDATE, FIND, SHOWTABLE, EXIT
  */
 
+/*
 // 직원 클래스
 class Employee {
 	private String name;
@@ -120,8 +121,10 @@ public class 실습_메뉴_emp_table {
 			if (choice == menu)
 				System.out.println(choice + " == " +  menu);
 				*/
+
 			//Menu menu = choice;
-			System.out.println("choice = " + choice);
+
+/*			System.out.println("choice = " + choice);
 			System.out.println("menu = " + menu);
 			if (menu == null) {
 				System.out.println("잘못된 선택입니다.\n");
@@ -196,4 +199,4 @@ public class 실습_메뉴_emp_table {
 		}
 
 	}
-}
+}*/
